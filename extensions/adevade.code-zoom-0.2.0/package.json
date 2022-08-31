@@ -1,0 +1,78 @@
+{
+	"name": "code-zoom",
+	"displayName": "Code Zoom",
+	"description": "Make code small, make code big. Easy as that.",
+	"version": "0.2.0",
+	"publisher": "adevade",
+	"repository": "https://github.com/adevade/code-zoom",
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:code-zoom.default",
+		"onCommand:code-zoom.small",
+		"onCommand:code-zoom.big"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "code-zoom.default",
+				"title": "Code Zoom: Default"
+			},
+			{
+				"command": "code-zoom.small",
+				"title": "Code Zoom: Small"
+			},
+			{
+				"command": "code-zoom.big",
+				"title": "Code Zoom: Big"
+			}
+		],
+		"configuration": {
+			"title": "Code Zoom",
+			"properties": {
+				"code-zoom.small.fontSize": {
+					"type": "integer",
+					"default": 12,
+					"minimum": 6
+				},
+				"code-zoom.small.lineHeight": {
+					"type": "number",
+					"default": 1.25,
+					"minimum": 1,
+					"maximum": 7
+				},
+				"code-zoom.big.fontSize": {
+					"type": "integer",
+					"default": 32,
+					"minimum": 6
+				},
+				"code-zoom.big.lineHeight": {
+					"type": "number",
+					"default": 4,
+					"minimum": 1,
+					"maximum": 7
+				}
+			}
+		}
+	},
+	"scripts": {},
+	"devDependencies": {
+		"@types/vscode": "^1.32.0"
+	},
+	"__metadata": {
+		"id": "fbab9eb4-2f1c-43b7-bd50-803d093533b5",
+		"publisherId": "9bc012b5-8f4d-48ea-8755-f10bcf03f751",
+		"publisherDisplayName": "adevade",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": true,
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1660893082075
+	}
+}
